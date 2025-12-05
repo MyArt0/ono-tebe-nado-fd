@@ -9,7 +9,6 @@ html {
   place-items: center;
   font-size: 18px;
   font-weight: 400;
-  scroll-behavior: smooth;
 }
 .header .menu {
   display: flex;
