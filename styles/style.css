@@ -1,276 +1,260 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-.header{
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;
-    height: 293px;
-    place-items: center;
-    font-size: 18px;
-    font-weight: 400;
-    scroll-behavior:smooth;
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  height: 293px;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  scroll-behavior: smooth;
 }
-.header .menu{
-    display: flex;
-    list-style: circle;
-    gap: 32px;
-}
-
-.header .menu li:first-child, .header .menu li:first-child a{
-   list-style: none;
-   text-decoration: none;
+.header .menu {
+  display: flex;
+  list-style: circle;
+  gap: 32px;
 }
 
-.logo-black{
-    width: 148px;
-    height: 105px;
+.header .menu li:first-child,
+.header .menu li:first-child a {
+  list-style: none;
+  text-decoration: none;
 }
 
-.header .address{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    font-style: normal;
-    max-width: 240px;
-    max-height: 98px;
-    line-height: 24px;
-    margin-left: 100px;
+.logo-black {
+  width: 148px;
+  height: 105px;
 }
 
-.cover_image{
-    position: relative;
-    overflow: hidden;
-    min-height: 757px;
+.header .address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  max-width: 240px;
+  max-height: 98px;
+  line-height: 24px;
+  margin-left: 100px;
 }
 
-.cover_image img{
-    min-height: 757px;
-    object-fit: cover;
-    object-position: center;
+.cover_image {
+  position: relative;
+  overflow: hidden;
+  min-height: 757px;
 }
 
-.cover .overlay{
-    background-color: black;
-    opacity: 60%;
-    position: absolute;
-    inset: 0;
+.cover_image img {
+  min-height: 757px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.cover_title{
-    font-size: 50px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 30px;
-}
-.cover_text_left{
-    position: absolute;
-    top:165px;
-    left: 50px;
+.cover .overlay {
+  background-color: black;
+  opacity: 60%;
+  position: absolute;
+  inset: 0;
 }
 
-.cover_text_center{
-    position: absolute;
-    inset: 300px 380.5px 342px;
+.cover_title {
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+}
+.cover_text_left {
+  position: absolute;
+  top: 165px;
+  left: 50px;
 }
 
-.cover_text_right{
-    position: absolute;
-    inset: 435px 50px 207px 663px;
+.cover_text_center {
+  position: absolute;
+  inset: 300px 380.5px 342px;
 }
 
-.cover_description{
-    display: flex;
-    position: absolute;
-    inset: 656px 50px 50px 50px;
-    color: white;
-    font-size: 22px;
-    text-transform: uppercase;
-    word-spacing: 19px;
-    justify-content: space-between;
-    align-items: center;
+.cover_text_right {
+  position: absolute;
+  inset: 435px 50px 207px 663px;
 }
 
-.cover_button{
-    cursor: pointer;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: uppercase;
-    width: 256px;
-    height: 51px;
-    background: transparent;
-    border: 1px solid white;
-    transition: all 0.5s ease;
+.cover_description {
+  display: flex;
+  position: absolute;
+  inset: 656px 50px 50px 50px;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  word-spacing: 19px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cover_button:hover{
-    background-color: rgb(0, 0, 0, 0.5)
+.cover_button {
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 256px;
+  height: 51px;
+  background: transparent;
+  border: 1px solid white;
+  transition: all 0.5s ease;
 }
 
-.lots{
-    color: black;
-    margin: 176px 24px 0px 24px;
+.cover_button:hover {
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
-.lots_title{
-    padding-left: 40px;
-    font-size: 40px;
-    text-transform: uppercase;
+.lots {
+  color: black;
+  margin: 176px 24px 0px 24px;
 }
 
-.cards_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-    margin-top: 27px;
-    margin-bottom: 30px;
-    height: 596px;
+.lots_title {
+  padding-left: 40px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
-.card{
-    position: relative;
-    overflow: hidden;
+.cards_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  margin-top: 27px;
+  margin-bottom: 30px;
+  height: 596px;
 }
 
-.card_content img{
-    height: 596px;
-    object-fit: cover;
-    object-position: center;
+.card {
+  position: relative;
+  overflow: hidden;
 }
 
-.card .overlay{
-    background-color: black;
-    opacity: 60%;
-    position: absolute;
-    inset: 0;
+.card_content img {
+  height: 596px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.card_text{
-    position: absolute;
-    inset: 0;
-    color: white;
-    padding: 0 40px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.card .overlay {
+  background-color: black;
+  opacity: 60%;
+  position: absolute;
+  inset: 0;
 }
 
-.card_text p{
-    font-size: 20px;
-    line-height: 120%;
+.card_text {
+  position: absolute;
+  inset: 0;
+  color: white;
+  padding: 0 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card_text a{
-    font-size: 22px;
-    text-transform: uppercase;
-    line-height: 120%;
+.card_text p {
+  font-size: 20px;
+  line-height: 120%;
 }
 
-.lots_show_more{
-    padding-left: 40px;
-    font-size: 20px;
+.card_text a {
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 120%;
 }
 
-.auction{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 72px;
-    margin: 120px 24px 0 24px;
-    min-height: 595px;
+.lots_show_more {
+  padding-left: 40px;
+  font-size: 20px;
 }
 
-.auction_logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 35px;
-    margin-left: 47px;
-    width: 240px;
-    height: 240px;
-    background-color: black;
-    border-radius: 50%;
-}
-.auction_logo img{
-    width: 148px;
-    height: 114px;
+.auction {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 72px;
+  margin: 120px 24px 0 24px;
+  min-height: 595px;
 }
 
-.about_auction{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 133px;
+.auction_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  margin-left: 47px;
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border-radius: 50%;
+}
+.auction_logo img {
+  width: 148px;
+  height: 114px;
 }
 
-.about_title{
-    font-size: 27px;
-    text-transform: uppercase;
+.about_auction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 133px;
 }
 
-.about_text{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
+.about_title {
+  font-size: 27px;
+  text-transform: uppercase;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 180px;
-    padding: 0 50px;
-    font-size: 18px;
+.about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
-.footer address{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    font-style: normal;
-    line-height: 24.3px;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 180px;
+  padding: 0 50px;
+  font-size: 18px;
 }
 
-.footer .menu{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    list-style: none;
+.footer address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-style: normal;
+  line-height: 24.3px;
 }
 
-.footer .menu li:first-child a{
-   text-decoration: none;
+.footer .menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style: none;
 }
 
-.footer_social_icons{
-    display: flex;
-    gap: 48px;
-
+.footer .menu li:first-child a {
+  text-decoration: none;
 }
 
-.footer_social_icons img{
-    width: 48px;
-    height: 48px;
+.footer_social_icons {
+  display: flex;
+  gap: 48px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer_social_icons img {
+  width: 48px;
+  height: 48px;
+}
