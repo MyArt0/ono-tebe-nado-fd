@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-    <link rel="stylesheet" href="/fonts/fonts.css" />
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header id="header" class="header">
       <nav>
         <ul class="menu">
           <li>
-            <a href="#header">главная</a>
+            <a href="#0" class="active">главная</a>
           </li>
           <li>
             <a href="#lots">посмотреть лоты</a>
@@ -25,58 +25,56 @@
         </ul>
       </nav>
       <a href="#header"
-        ><img src="/images/logo-black.svg" alt="Logo" class="logo-black"/>
+        ><img
+          src="images/logo-black.svg"
+          alt="Логотип аукциона 'Оно тебе надо'"
+          class="logo_black"
+        />
       </a>
       <address class="address">
         <a href="tel:+99995555555">+9 999 555 5555</a>
         <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        наб. Принсенграхт 263-<br />265, Амстердам
+        <p>наб. Принсенграхт 263-<br />265, Амстердам</p>
       </address>
     </header>
     <main>
       <section class="cover">
-        <div class="cover_image">
-          <img src="/images/cover.jpg" alt="" />
-          <div class="overlay"></div>
-          <div class="cover_title">
-            <h1 class="cover_text_left">оно</h1>
-            <h1 class="cover_text_center">тебе</h1>
-            <h1 class="cover_text_right">надо</h1>
-          </div>
-          <div class="cover_description">
-            <p class="cover__description_text">
-              аукцион вещей, в которые никто не верил
-            </p>
-            <button class="cover_button">сделать ставку</button>
-          </div>
+        <div class="overlay"></div>
+        <h1 class="cover_title">
+          <span class="cover_text">оно</span>
+          <span class="cover_text text_center">тебе</span>
+          <span class="cover_text text_right">надо</span>
+        </h1>
+        <div class="cover_description">
+          <p class="cover__description_text">
+            аукцион вещей, в которые никто не верил
+          </p>
+          <button class="cover_button">сделать ставку</button>
         </div>
       </section>
       <section id="lots" class="lots">
         <h2 class="lots_title">лоты</h2>
-        <div class="cards_container">
-          <div class="card">
-            <div class="overlay"></div>
-            <div class="card_content">
-              <img src="/images/card-lot-01.jpg" alt="" />
-              <div class="card_text">
-                <a href="#">фильм режиссёра, который бросил киношколу</a>
+        <ul class="cards_container">
+          <li>
+            <a href="#" class="card card_movie">
+              <article class="card_content">
+                <div class="overlay"></div>
+                <h3>фильм режиссёра, который бросил киношколу</h3>
                 <p>
                   Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                   ставка, если бы вы не знали, что режиссёр — Пол Томас
                   Андерсон?
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="overlay"></div>
-            <div class="card_content">
-              <img src="/images/card-lot-02.jpg" alt="" />
-              <article class="card_text">
-                <a href="#"
-                  >книга, где описан один скучный день из жизни рекламного
-                  агента</a
-                >
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="card card_book">
+              <article class="card_content">
+                <div class="overlay"></div>
+                <h3>
+                  книга, где описан один скучный день из жизни рекламного агента
+                </h3>
                 <p>
                   Объёмом почти в тысячу страниц. Иногда без знаков препинания и
                   с переходами на древнеанглийский. В ней одновременно
@@ -86,17 +84,15 @@
                   Джеймса Джойса?
                 </p>
               </article>
-            </div>
-          </div>
-          <div class="card">
-            <div class="overlay"></div>
-            <div class="card_content">
-              <img src="/images/card-lot-03.jpg" alt="" />
-              <article class="card_text">
-                <a href="#"
-                  >картина, которую повторит даже 5-летний сын маминой
-                  подруги</a
-                >
+            </a>
+          </li>
+          <li>
+            <a href="#" class="card card_picture">
+              <article class="card_content">
+                <div class="overlay"></div>
+                <h3>
+                  картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
                 <p>
                   Ну действительно, там линия, тут кружочек, а здесь и вовсе
                   что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
@@ -104,20 +100,23 @@
                   что это — одна из революционных работ Кандинского?
                 </p>
               </article>
-            </div>
-          </div>
-        </div>
+            </a>
+          </li>
+        </ul>
         <a href="#" class="lots_show_more">посмотреть больше</a>
       </section>
       <section id="auction" class="auction">
         <div class="auction_logo">
-          <img src="/images/logo-white.svg" alt="" />
+          <img
+            src="images/logo-white.svg"
+            alt="Логотип аукциона 'Оно тебе надо'"
+          />
         </div>
         <div class="about_auction">
           <div class="about_title">
             <h2>об аукционе</h2>
           </div>
-          <article class="about_text">
+          <div class="about_text">
             <p>
               Здесь вы не встретите очередное пафосное собрание невероятно
               дорогого антиквариата. Наши лоты вообще не должны были попасть ни
@@ -134,35 +133,46 @@
               вещи не верил никто, продолжали верить их создатели. И сейчас эти
               лоты стали культовыми.
             </p>
-          </article>
+          </div>
         </div>
       </section>
-      <footer class="footer">
-        <address class="address">
-          <a href="tel:+99995555555">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          наб. Принсенграхт 263-265,<br />
-          Амстердам
-        </address>
-        <nav>
-          <ul class="menu">
-            <li>
-              <a href="#header">главная</a>
-            </li>
-            <li>
-              <a href="#lots">посмотреть лоты</a>
-            </li>
-            <li>
-              <a href="#auction">об аукционе</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer_social_icons">
-          <a href="https://www.youtube.com/" target="_blank"><img src="/images/yt.svg" alt="" /></a>
-          <a href="https://vk.com/" target="_blank"><img src="/images/vk.svg" alt="" /></a>
-          <a href="https://ru.pinterest.com/" target="_blank"><img src="/images/pinterest.svg" alt="" /></a>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <address class="address">
+        <a href="tel:+99995555555">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p>наб. Принсенграхт 263-265,<br />Амстердам</p>
+      </address>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#header">главная</a>
+          </li>
+          <li>
+            <a href="#lots">посмотреть лоты</a>
+          </li>
+          <li>
+            <a href="#auction" class="active">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer_social_icons">
+        <li>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><img src="images/yt.svg" alt="Наш ютуб канал"
+          /></a>
+        </li>
+        <li>
+          <a href="https://vk.com/" target="_blank"
+            ><img src="images/vk.svg" alt="Наша страница вконтакте"
+          /></a>
+        </li>
+        <li>
+          <a href="https://ru.pinterest.com/" target="_blank"
+            ><img src="images/pinterest.svg" alt="Наш пинтерест"
+          /></a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

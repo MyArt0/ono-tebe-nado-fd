@@ -2,94 +2,111 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== HEADER ===== */
+
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  height: 293px;
+  min-height: 293px;
   place-items: center;
   font-size: 18px;
   font-weight: 400;
 }
+
 .header .menu {
   display: flex;
   list-style: circle;
   gap: 32px;
 }
 
-.header .menu li:first-child,
-.header .menu li:first-child a {
-  list-style: none;
+.active {
   text-decoration: none;
 }
 
-.logo-black {
+.header .menu li:first-child {
+  list-style: none;
+}
+
+.logo_black {
   width: 148px;
   height: 105px;
 }
 
-.header .address {
+.address {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   font-style: normal;
   max-width: 240px;
-  max-height: 98px;
-  line-height: 24px;
+  min-height: 98px;
+  line-height: 24.3px;
   margin-left: 100px;
 }
 
-.cover_image {
+/* ===== COVER SECTION ===== */
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  overflow: hidden;
   min-height: 757px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
-.cover_image img {
-  min-height: 757px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.cover .overlay {
-  background-color: black;
-  opacity: 60%;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   inset: 0;
+  z-index: -1;
 }
 
 .cover_title {
-  font-size: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 165px 50px 106px;
+  font-size: 100px;
   color: white;
   text-transform: uppercase;
   letter-spacing: 30px;
 }
-.cover_text_left {
-  position: absolute;
-  top: 165px;
-  left: 50px;
+
+.cover_text {
+  display: block;
 }
 
-.cover_text_center {
-  position: absolute;
-  inset: 300px 380.5px 342px;
+/* letter-spacing ломает правый отступ, из-за этого не получается разместить слова 
+   как на макете без доп отступов для них */
+   
+.text_center {
+  text-align: center;
+  padding-left: 30px;
+  margin-top: 15px;
 }
 
-.cover_text_right {
-  position: absolute;
-  inset: 435px 50px 207px 663px;
+.text_right {
+  text-align: right;
+  padding-left: 30px;
+  margin-right: -30px;
+  position: relative;
+  top: 15px;
 }
 
 .cover_description {
   display: flex;
-  position: absolute;
-  inset: 656px 50px 50px 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 50px 50px;
   color: white;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 19px;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .cover_button {
@@ -109,6 +126,8 @@ html {
   background-color: rgb(0, 0, 0, 0.5);
 }
 
+/* ===== LOTS SECTION ===== */
+
 .lots {
   color: black;
   margin: 176px 24px 0px 24px;
@@ -122,34 +141,49 @@ html {
 
 .cards_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 27px;
   margin-bottom: 30px;
-  height: 596px;
+  min-height: 596px;
+  list-style: none;
+  color: white;
 }
 
-.card {
-  position: relative;
+.card_movie,
+.card_book,
+.card_picture {
+  background-repeat: no-repeat;
+  background-size: 185%;
+  background-position: center;
+  display: block;
+  height: 100%;
+  text-decoration: none;
   overflow: hidden;
+  transition: all 0.7s ease;
 }
 
-.card_content img {
-  height: 596px;
-  object-fit: cover;
-  object-position: center;
+.card_movie {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
-.card .overlay {
-  background-color: black;
-  opacity: 60%;
-  position: absolute;
-  inset: 0;
+.card_book {
+  background-image: url(../images/card-lot-02.jpg);
 }
 
-.card_text {
-  position: absolute;
-  inset: 0;
+.card_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card_movie:hover,
+.card_book:hover,
+.card_picture:hover {
+  background-size: 170%;
+}
+
+.card_content {
+  position: relative;
+  height: 100%;
   color: white;
   padding: 0 40px;
   padding-top: 48px;
@@ -157,23 +191,33 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 0;
 }
 
-.card_text p {
+/* Я вижу, что в фигме нет прозрачности и офсета, но при значениях из фигмы, в браузере почему-то всё выглядит немного иначе */
+
+.card_content p {
   font-size: 20px;
   line-height: 120%;
+  opacity: 90%;
 }
-
-.card_text a {
+.card_content h3 {
   font-size: 22px;
   text-transform: uppercase;
   line-height: 120%;
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
+  text-decoration-color: rgba(255, 255, 255, 0.8);
 }
 
 .lots_show_more {
   padding-left: 40px;
   font-size: 20px;
+  text-underline-offset: 4.5px;
+  text-decoration-thickness: 1px;
 }
+
+/* ===== AUCTION SECTION ===== */
 
 .auction {
   display: grid;
@@ -220,21 +264,18 @@ html {
   font-weight: 400;
 }
 
+/* ===== FOOTER ===== */
+
 .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 180px;
+  margin: 180px 0;
   padding: 0 50px;
   font-size: 18px;
 }
 
 .footer address {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  font-style: normal;
-  line-height: 24.3px;
+  margin-left: 0;
 }
 
 .footer .menu {
@@ -244,13 +285,10 @@ html {
   list-style: none;
 }
 
-.footer .menu li:first-child a {
-  text-decoration: none;
-}
-
 .footer_social_icons {
   display: flex;
   gap: 48px;
+  list-style: none;
 }
 
 .footer_social_icons img {
